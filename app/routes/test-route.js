@@ -2,8 +2,8 @@ import Route from '@ember/routing/route';
 import {inject} from '@ember/service';
 
 export default Route.extend({
-  router: inject(),
+  foo: inject(),
   afterModel() {
-    this.get('router').transitionTo('target-route');
+    this.get('foo').bar();
   }
 });
